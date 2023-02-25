@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:world_time/constant.dart';
 import 'package:world_time/main_cubit.dart';
 import 'package:world_time/states.dart';
 
@@ -9,7 +10,9 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    internetConection(context);
     MainCubit ref = MainCubit.get(context);
+
     return Scaffold(
       extendBodyBehindAppBar: true,
       // appBar: AppBar(
